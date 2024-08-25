@@ -1,13 +1,14 @@
 const display = document.getElementById("display");
+const display2 = document.getElementById("display2");
 const buttons = document.querySelectorAll(".btn");
 
-let clear = " ";
-
 buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const buttonValue = button.textContent;
-    display.value += buttonValue;
-  });
+  if ("123456789/*-+.".includes(button.textContent)) {
+    button.addEventListener("click", function () {
+      const buttonValue = button.textContent;
+      display.innerHTML += buttonValue;
+    });
+  }
 });
 
 //all clearbutton
@@ -15,8 +16,8 @@ const AllClear = document.querySelector(".btn-AC");
 AllClear.addEventListener("click", allClear);
 
 function allClear() {
-  display.value = clear;
-  console.log(":he");
+  display.innerHTML = "";
+  display2.innerHTML = "";
 }
 
 ///evaluation
@@ -25,8 +26,14 @@ const Evaluation = document.querySelector(".btn-EQL");
 
 Evaluation.addEventListener("click", equal);
 function equal() {
-  display.value = eval(display.value);
- 
+  if (display.innerHTML === display2.innerHTML) {
+    display.innerHTML = "";
+  } else if (display.innerHTML === "") {
+    exit();
+  } else {
+    display2.innerHTML = display.innerHTML;
+    display.innerHTML = eval(display.innerHTML);
+  }
 }
 
 document.addEventListener("keydown", function (event) {
@@ -53,9 +60,8 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-const PreviousDisplay = doucument.querySelector(".previous");
-const previousValue = display.value;
- AllClear.addEventListener("Doubleclick", function previous(){
+
+AllClear.addEventListener("Doubleclick", function previous(){
    PreviousDisplay.textContent = previousValue .innertext;
 } )
 

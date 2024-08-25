@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0" />
-    <title>My Calculator </title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="container">
-     
-      <div class="main-grid">
-        <input type="text " class="previous ">
-        <input id="display" type="text"  readonly  />
-        
-        <button class="btn-AC ">AC</button>
-        <button class="btn-DE">DE</button>
-        <button class="btn">/</button>
-        <button class="btn">+</button>
 
-        <button class="btn">1</button>
-        <button class="btn">2</button>
-        <button class="btn">3</button>
-        <button class="btn">-</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0" />
+  <title>My Calculator </title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-        <button class="btn">4</button>
-        <button class="btn">5</button>
-        <button class="btn">6</button>
-        <button class="btn">.</button>
+<body>
+  <div id="calculator" class="container">
 
-        <button class="btn">7</button>
-        <button class="btn">9</button>
-        <button class="btn">0</button>
-        <button class="btn">*</button>
-        <button class="btn-EQL">=</button>
-      </div>
+    <div class="main-grid">
+      <span id="display2" type="text" class="display"></span>
+      <span id="display" type="text" class="display"></span>
+
+      <button class="btn-AC btn">AC</button>
+      <button class="btn-DE btn">DE</button>
+      <button class="btn">/</button>
+      <button class="btn">+</button>
+
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn">-</button>
+
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn">.</button>
+
+      <button class="btn">7</button>
+      <button class="btn">9</button>
+      <button class="btn">0</button>
+      <button class="btn">*</button>
+      <button class="btn-EQL btn">=</button>
     </div>
+  </div>
+</body>
+<!-- <script src="./backend.js"></script> -->
+<script src="./script.js"></script>
 
-
-
-    <div class="practice">
-      <h1>hello</h1>
-    </div>
-  </body>
-  <!-- <script src="./backend.js"></script> -->
-  <script src="./script.js"></script>
-  </html>
+</html>
